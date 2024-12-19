@@ -85,4 +85,3 @@
   (interactive)
   (let ((filename (buffer-file-name)))
     (browse-url (concat "file://" filename))))
-
