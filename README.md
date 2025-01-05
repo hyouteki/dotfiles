@@ -1,10 +1,16 @@
-1. [awesome](./awesome/) lists
-2. [libinput-gestures](./gestures/libinput-gestures.conf) configuration
-3. [i3](./i3/config) window manager configuration
-4. [i3status](./i3status/config) bar configuration
-5. [xorg-touchpad](./xorg.conf.d/90-touchpad.conf) configuration
-6. bash [config](.bashrc) and [profile](.profile)
-7. emacs [config](.emacs) and [custom-profile](.emacs.custom.el)
-8. [vim](init.vim) configuration
-9. [tmux](.tmux.conf) configuration
-10. some handy [scripts](./scripts/)
+1. [libinput-gestures](./gestures/libinput-gestures.conf) configuration
+2. [i3](./i3/config) window manager configuration
+3. [i3status](./i3status/config) bar configuration
+4. [xorg-touchpad](./xorg.conf.d/90-touchpad.conf) configuration
+5. bash [config](.bashrc) and [profile](.profile)
+6. emacs [config](emacs/init.el) and [custom-profile](emacs/custom.el)
+7. [vim](init.vim) configuration
+8. [tmux](tmux/config) configuration
+9. some handy [scripts](scripts/)
+
+### Getting Started
+```bash
+git clone https://github.com/hyouteki/dotfiles
+cd dotfiles
+bash scripts/SETUP.sh
+```
