@@ -85,3 +85,22 @@
   (interactive)
   (let ((filename (buffer-file-name)))
     (browse-url (concat "file://" filename))))
+
+;; Changes needed to work in emacs terminal mode
+;; Use wl-clipboard for Wayland systems
+(when (getenv "WAYLAND_DISPLAY")
+  (setq interprogram-cut-function
+        (lambda (text &optional push)
+          (let ((process-connection-type nil))
+            (let ((proc (start-process "wl-copy" "*wl-copy*" "wl-copy")))
+              (process-send-string proc text)
+              (process-send-eof proc)))))
+  (setq interprogram-paste-function
+        (lambda ()
+          (shell-command-to-string "wl-paste -n"))))
+;; Key bindings only for the terminal mode
+(if (not (display-graphic-p))
+    (progn
+      (global-set-key (kbd "C-c d") 'kill-whole-line)
+      (global-set-key (kbd "C-x /") 'comment-line)
+      (global-set-key (kbd "C-q") 'backward-kill-word)))
