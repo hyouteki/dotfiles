@@ -103,4 +103,7 @@
     (progn
       (global-set-key (kbd "C-c d") 'kill-whole-line)
       (global-set-key (kbd "C-x /") 'comment-line)
-      (global-set-key (kbd "C-q") 'backward-kill-word)))
+      (global-set-key (kbd "C-q") 'backward-kill-word)
+	  (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+	  (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+	  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)))

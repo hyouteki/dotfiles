@@ -7,11 +7,15 @@ if [ -z $ROOT ]; then
     echo "ROOT not set, defaulting to: ${ROOT}"
 fi
 
+EMACS_VERSION=28.2
+
 ln -s -f $ROOT/i3/config                          ~/.config/i3/config
 ln -s -f $ROOT/i3status/config                    ~/.config/i3status/config
 ln -s -f $ROOT/gestures/libinput-gestures.conf    ~/.config/libinput-gestures.conf
 ln -s -f $ROOT/fish/config.fish                   ~/.config/fish/config.fish
 ln -s -f $ROOT/tmux/config                        ~/.tmux.conf
 ln -s -f $ROOT/emacs/init.el                      ~/.emacs
-# NOTE: symlink does not work here for some reason
+# NOTE: Symlink does not work here for some reason
 ln    -f $ROOT/emacs/custom.el                    ~/.emacs.custom.el
+# Sudo commands
+sudo ln    -f $ROOT/emacs/theme.el                /usr/share/emacs/$EMACS_VERSION/etc/themes/wombat-theme.el

@@ -117,4 +117,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/home/nosferatu/ThirdParty/go/bin
+third_party_paths=(
+	/home/nosferatu/ThirdParty/zig-linux-x86_64-0.14.0
+)
+
+for third_party_path in ${third_party_paths[@]}; do
+	export PATH=$PATH:$third_party_path
+done
+
+# For nix environment
+. ~/.nix-profile/etc/profile.d/nix.sh

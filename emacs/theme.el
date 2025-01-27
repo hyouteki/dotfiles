@@ -1,4 +1,7 @@
-;; Theme that I us 
+;; Emacs theme, that I use.
+;; CHANGES made to wombat-theme:
+;; 1. Transparent background.
+;; 2. Red mode-line and font-face color.
 
 ;;; wombat-theme.el --- Custom face theme for Emacs  -*- lexical-binding:t -*-
 
@@ -43,8 +46,8 @@ are included.")
    `(isearch ((,class (:background "#343434" :foreground "#857b6f"))))
    `(lazy-highlight ((,class (:background "#384048" :foreground "#a0a8b0"))))
    ;; Mode line faces
-   `(mode-line ((,class (:background "#444444" :foreground "#f6f3e8"))))
-   `(mode-line-inactive ((,class (:background "#444444" :foreground "#857b6f"))))
+   `(mode-line ((,class (:background "#400000" :foreground "#b98b8b"))))
+   `(mode-line-inactive ((,class (:background "#400000" :foreground "#857b6f"))))
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground "#e5786d"))))
    `(escape-glyph ((,class (:foreground "#ddaa6f" :weight bold))))
