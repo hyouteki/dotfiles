@@ -15,7 +15,9 @@ ln -s -f $ROOT/gestures/libinput-gestures.conf    ~/.config/libinput-gestures.co
 ln -s -f $ROOT/fish/config.fish                   ~/.config/fish/config.fish
 ln -s -f $ROOT/tmux/config                        ~/.tmux.conf
 ln -s -f $ROOT/emacs/init.el                      ~/.emacs
-# NOTE: Symlink does not work here for some reason
+ln -s -f $ROOT/Makefile                           ~/Makefile
+# TODO: cannot not make emacs follow symlinks from elisp
 ln    -f $ROOT/emacs/custom.el                    ~/.emacs.custom.el
+ln    -f $ROOT/emacs/lsp.el                       ~/.emacs.lsp.el
 # Sudo commands
 sudo ln    -f $ROOT/emacs/theme.el                /usr/share/emacs/$EMACS_VERSION/etc/themes/wombat-theme.el
