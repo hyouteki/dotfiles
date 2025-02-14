@@ -4,6 +4,4 @@
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
 ;; Key bindings only for the terminal mode
-(if (not (display-graphic-p))
-    (progn
-	  (global-set-key (kbd "M-RET") 'eglot-format)))
+(global-set-key (kbd "M-RET") 'eglot-format)
