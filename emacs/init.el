@@ -77,6 +77,7 @@
 
 ;; language modes
 (require 'rust-mode)
+(load-file ".elsc/odin-mode.el")
 
 (put 'downcase-region 'disabled nil)
 

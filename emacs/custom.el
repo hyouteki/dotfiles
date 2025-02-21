@@ -19,4 +19,17 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :extend nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "outline" :family "DejaVu Sans Mono")))))
 
-(set-frame-font "IosevkaTerm-20" t t)
+(set-frame-font "Hack-20" t t)
+
+;; Reference: https://emacs.stackexchange.com/a/22668
+(defun toggle-transparency ()
+  (interactive)
+  (let ((alpha (frame-parameter nil 'alpha)))
+    (if (eq
+		 (if (numberp alpha)
+			 alpha
+		   (cdr alpha)) ; may also be nil
+		 100)
+		(set-frame-parameter nil 'alpha '(85 . 50))
+      (set-frame-parameter nil 'alpha '(100 . 100)))))
+(global-set-key (kbd "C-c t") 'toggle-transparency)

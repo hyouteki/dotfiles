@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # I know I can use GNU stow but fuck it we ball
 
@@ -21,3 +21,5 @@ ln    -f $ROOT/emacs/custom.el                    ~/.emacs.custom.el
 ln    -f $ROOT/emacs/lsp.el                       ~/.emacs.lsp.el
 # Sudo commands
 sudo ln    -f $ROOT/emacs/theme.el                /usr/share/emacs/$EMACS_VERSION/etc/themes/wombat-theme.el
+
+bash $ROOT/emacs/SETUP.sh

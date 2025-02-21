@@ -10,5 +10,11 @@ warp.off:
 	make warp.test
 warp.fix:
 	warp-cli tunnel rotate-keys
+
 minecraft:
 	sudo java -jar ThirdParty/TLauncher.jar
+
+vpn:
+	forticlient vpn connect IIITDVPN -u lakshay21060 -p
+vpn.off:
+	forticlient vpn disconnect
